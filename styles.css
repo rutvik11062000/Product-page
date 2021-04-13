@@ -1,0 +1,141 @@
+
+:root{
+    --primary-color: #A26596;
+}
+
+body{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.description{
+    flex: 5;
+    padding: 0px 30px;
+}
+
+.main-content{
+    display: flex;
+}
+
+.heading{
+    font-size: 35px;
+}
+
+.subtitle{
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+
+  .checkout{
+    flex: 3;
+
+  }
+
+  .checkout-heading{
+
+  }
+
+  .heroimage{
+      flex: 3;
+  }
+
+  .v-space-20{
+      height: 20px;
+  }
+
+
+  .cross-price-text{
+      text-decoration: line-through;
+  }
+
+  .highlight-price{
+      margin-left: 10px;
+      background-color: #F5F1C1;
+  }
+
+  .description-text{
+      color: grey;
+      font-size: 16px;
+  }
+
+  .button{
+      color: white;
+      background-color: var(--primary-color);
+      padding: 10px 20px;
+      font-size: 18px;
+  }
+
+  .counter{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .symbol{
+    padding: 10px 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+
+  .grey-back{
+      background-color: #bbb;
+  }
+
+  .end{
+      color: var(--primary-color);
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 16px;
+  }
+
+  .hr-color{
+    border-top: 4px solid grey;
+  }
+
+  .product-tile{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .product-title-price{
+      margin-top: 5px;
+      font-size: 16px;
+      color: gray;
+  }
+
+  product-title-price-flex{
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      justify-content: space-between;
+
+  }
+
+  .subtotal{
+      height: 60px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+  }
+
+  .purchase-section{
+      display: flex;
+
+  }
+
+  .button-grey{
+      text-align: center;
+      font-weight: bold;
+      margin-left: 5px;
+      flex: 1;
+    color: white;
+    background-color: grey;
+    padding: 10px 20px;
+    font-size: 18px;
+}
