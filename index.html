@@ -9,6 +9,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function incrementValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number').value = value;
+        }
+        function decrementValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            if (value === 0) return;
+            value--;
+            document.getElementById('number').value = value;
+        }
+        function addToWishlist() {
+            document.getElementById("AddToWishlist").style.color = "green";
+        }
+    </script>
 </head>
 
 <body>
@@ -16,8 +33,23 @@
         <img src="sale.png" height="400px" width="400px" class="heroimage">
         <div class="description">
             <div class="heading">Premium Quality</div>
-            <div class="subtitle">(2 customers reviews)</div>
+            <div class="reviews-with-stars">
 
+
+                <div class="subtitle">(2 customers reviews)</div>
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="text">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="text">1 star</label>
+                </div>
+            </div>
             <hr class="solid">
             <div class="v-space-20"></div>
             <div class="price-text"> <span class="cross-price-text">$15.00 </span><span
@@ -31,15 +63,16 @@
             <div class="v-space-20"></div>
             <div class="counter">
                 <div class="plus-minus">
-                    <span class="symbol">-</span>
+                    <span class="symbol" onclick="decrementValue()">-</span>
 
-                    <span class="symbol grey-back">1</span>
-                    <span class="symbol">+</span>
+                    <!-- <span class="symbol grey-back" id="number" value="1">0</span> -->
+                    <input class="symbol grey-back" type="text" id="number" value="0" style="width: 10px;" />
+                    <span class="symbol" onclick="incrementValue()">+</span>
                 </div>
-                <div class="button">Add to cart</div>
+                <div class="button" ">Add to cart</div>
 
             </div>
-            <div class="end">💓 Add to wishlist</div>
+            <div class="end" id="AddToWishlist" onclick="addToWishlist()">💓 Add to wishlist</div>
         </div>
         <div class="checkout">
             <div class="checkout-heading">
@@ -72,7 +105,7 @@
             </div>
             <hr>
             <div class="subtotal">
-                Subtotal: $94.00 
+                Subtotal: $94.00
             </div>
             <hr>
             <div class="purchase-section">
